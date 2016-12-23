@@ -17,6 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let tabBarController:UITabBarController? = UITabBarController.init();
+        var firstView:UIViewController?;
+        firstView = ViewController.init();
+        firstView?.title = "FirtView";
+        
+        tabBarController?.setViewControllers([firstView!], animated: true);
+        window?.rootViewController = tabBarController;
+        
         return true
     }
 
